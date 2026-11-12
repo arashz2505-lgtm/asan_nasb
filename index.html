@@ -1,0 +1,841 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="آسان نصب؛ فروشگاه تخصصی شلف‌های چوبی و فلزی">
+<title>آسان نصب | فروشگاه تخصصی شلف</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+ --navy:#0b2342;
+ --blue:#153b60;
+ --gold:#e5ad32;
+ --cream:#faf8f2;
+ --white:#fff;
+ --text:#25364a;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+ font-family:Vazirmatn,Tahoma,sans-serif;
+ background:var(--cream);
+ color:var(--text);
+ line-height:1.9;
+}
+
+.container{width:92%;max-width:1150px;margin:auto}
+
+header{
+ background:var(--navy);
+ color:white;
+ border-bottom:4px solid var(--gold);
+ position:sticky;
+ top:0;
+ z-index:100;
+}
+
+.nav{
+ min-height:75px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:15px;
+}
+
+.logo{
+ color:var(--gold);
+ font-size:25px;
+ font-weight:900;
+}
+
+.logo small{
+ display:block;
+ font-size:10px;
+ color:white;
+}
+
+nav{display:flex;gap:20px}
+
+nav a{
+ color:white;
+ text-decoration:none;
+ font-size:14px;
+}
+
+nav a:hover{color:var(--gold)}
+
+.cart-button{
+ background:var(--gold);
+ border:0;
+ border-radius:8px;
+ padding:10px 15px;
+ cursor:pointer;
+ font-family:inherit;
+ font-weight:bold;
+}
+
+.hero{
+ background:linear-gradient(120deg,#071a32,#17456b);
+ color:white;
+ padding:85px 0;
+}
+
+.hero-content{max-width:700px}
+
+.hero h1{
+ font-size:clamp(35px,6vw,55px);
+ line-height:1.5;
+ margin-bottom:15px;
+}
+
+.hero h1 span{color:var(--gold)}
+
+.hero p{
+ color:#d5e0ec;
+ font-size:17px;
+ margin-bottom:25px;
+}
+
+.btn{
+ display:inline-block;
+ padding:12px 23px;
+ border-radius:9px;
+ text-decoration:none;
+ font-weight:bold;
+ border:0;
+ cursor:pointer;
+ font-family:inherit;
+}
+
+.btn-gold{
+ background:var(--gold);
+ color:var(--navy);
+}
+
+.btn-outline{
+ border:1px solid white;
+ color:white;
+ margin-right:8px;
+}
+
+.section{padding:65px 0}
+
+.section-title{
+ text-align:center;
+ margin-bottom:35px;
+}
+
+.section-title h2{
+ color:var(--navy);
+ font-size:28px;
+}
+
+.section-title p{
+ color:#777;
+ margin-top:8px;
+}
+
+.features{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:18px;
+ margin-top:-35px;
+}
+
+.feature{
+ background:white;
+ padding:22px;
+ text-align:center;
+ border-radius:13px;
+ box-shadow:0 5px 20px #0000000c;
+ border-bottom:3px solid var(--gold);
+}
+
+.feature h3{
+ color:var(--navy);
+ font-size:17px;
+}
+
+.products{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:22px;
+}
+
+.product{
+ background:white;
+ border:1px solid #e8e3d9;
+ border-radius:14px;
+ overflow:hidden;
+ transition:.3s;
+}
+
+.product:hover{
+ transform:translateY(-5px);
+ box-shadow:0 10px 25px #00000012;
+}
+
+.product-image{
+ height:200px;
+ background:linear-gradient(135deg,#eee2ce,#d1b48c);
+ display:grid;
+ place-items:center;
+ font-size:75px;
+}
+
+.product-info{padding:18px}
+
+.product-info h3{
+ color:var(--navy);
+ font-size:17px;
+}
+
+.product-info p{
+ color:#777;
+ font-size:13px;
+ margin:8px 0;
+}
+
+.price{
+ color:#bd861b;
+ font-weight:900;
+ margin:10px 0;
+}
+
+.add{
+ width:100%;
+ background:var(--navy);
+ color:white;
+ border:0;
+ padding:11px;
+ border-radius:8px;
+ cursor:pointer;
+ font-family:inherit;
+}
+
+.add:hover{background:var(--blue)}
+
+.custom{
+ background:var(--navy);
+ color:white;
+ padding:65px 0;
+}
+
+.custom h2{
+ color:var(--gold);
+ margin-bottom:15px;
+}
+
+.form-box{
+ background:white;
+ color:var(--text);
+ padding:25px;
+ border-radius:15px;
+ max-width:650px;
+ margin:25px auto 0;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea{
+ width:100%;
+ padding:12px;
+ margin:7px 0 15px;
+ border:1px solid #ddd;
+ border-radius:8px;
+ font-family:inherit;
+}
+
+.form-box label{
+ font-weight:bold;
+ font-size:13px;
+}
+
+.form-box button{width:100%}
+
+.about-box{
+ background:white;
+ padding:30px;
+ border-radius:15px;
+ border:1px solid #eee;
+ text-align:center;
+}
+
+.about-box h2{
+ color:var(--navy);
+ margin-bottom:15px;
+}
+
+.contact{
+ background:#102f50;
+ color:white;
+ text-align:center;
+ padding:55px 0;
+}
+
+.contact h2{color:var(--gold)}
+
+.contact a{color:var(--navy)}
+
+footer{
+ background:#071a32;
+ color:white;
+ text-align:center;
+ padding:20px;
+ font-size:13px;
+}
+
+.cart-panel{
+ background:white;
+ position:fixed;
+ top:0;
+ left:-420px;
+ width:350px;
+ max-width:90%;
+ height:100vh;
+ z-index:200;
+ padding:22px;
+ box-shadow:0 0 30px #0003;
+ transition:.3s;
+ overflow-y:auto;
+}
+
+.cart-panel.open{left:0}
+
+.cart-panel h2{color:var(--navy)}
+
+.cart-item{
+ border-bottom:1px solid #ddd;
+ padding:12px 0;
+ font-size:13px;
+}
+
+.cart-item button{
+ color:red;
+ border:0;
+ background:none;
+ cursor:pointer;
+ margin-right:10px;
+ font-family:inherit;
+}
+
+.cart-total{
+ margin:20px 0;
+ font-weight:bold;
+ color:var(--navy);
+}
+
+.close-cart{
+ float:left;
+ border:0;
+ background:none;
+ font-size:25px;
+ cursor:pointer;
+}
+
+.quantity button{
+ padding:2px 9px;
+ margin:5px;
+ border:1px solid #ddd;
+ background:#f5f5f5;
+ border-radius:5px;
+ cursor:pointer;
+}
+
+@media(max-width:750px){
+ nav{display:none}
+ .features{grid-template-columns:1fr}
+ .products{grid-template-columns:repeat(2,1fr);gap:12px}
+ .product-image{height:135px;font-size:55px}
+ .hero{padding:55px 0}
+}
+
+@media(max-width:420px){
+ .products{grid-template-columns:1fr}
+ .hero h1{font-size:32px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+ <div class="logo">
+  آسان نصب
+  <small>طراحی و ساخت شلف‌های سفارشی</small>
+ </div>
+
+ <nav>
+  <a href="#home">خانه</a>
+  <a href="#products">محصولات</a>
+  <a href="#custom">ثبت سفارش</a>
+  <a href="#about">درباره ما</a>
+  <a href="#contact">تماس</a>
+ </nav>
+
+ <button class="cart-button" onclick="openCart()">
+  🛒 سبد خرید <span id="count">۰</span>
+ </button>
+
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="container hero-content">
+
+ <h1>
+  زیبایی و نظم را<br>
+  به فضای خود بیاورید؛
+  <span>با آسان نصب</span>
+ </h1>
+
+ <p>
+  طراحی، تولید و ساخت انواع شلف‌های چوبی و فلزی
+  با ابعاد و طرح دلخواه شما.
+ </p>
+
+ <a href="#products" class="btn btn-gold">مشاهده محصولات</a>
+ <a href="#custom" class="btn btn-outline">سفارش اختصاصی</a>
+
+</div>
+</section>
+
+<section class="section container">
+<div class="features">
+
+ <div class="feature">
+  <h3>🎨 طراحی اختصاصی</h3>
+  <p>مطابق سلیقه و فضای شما</p>
+ </div>
+
+ <div class="feature">
+  <h3>🛠️ ساخت باکیفیت</h3>
+  <p>ترکیب چوب و فلز مقاوم</p>
+ </div>
+
+ <div class="feature">
+  <h3>🚚 نصب آسان</h3>
+  <p>از ایده تا اجرای نهایی</p>
+ </div>
+
+</div>
+</section>
+
+<section class="section container" id="products">
+
+<div class="section-title">
+ <h2>فروشگاه محصولات آسان نصب</h2>
+ <p>محصول موردنظر خود را انتخاب کنید.</p>
+</div>
+
+<div class="products" id="productList"></div>
+
+</section>
+
+<section class="custom" id="custom">
+<div class="container">
+
+ <div class="section-title">
+  <h2>سفارش شلف اختصاصی</h2>
+  <p style="color:white">
+   محصول دلخواه خود را با اندازه و رنگ موردنظر سفارش دهید.
+  </p>
+ </div>
+
+ <div class="form-box">
+
+  <form id="orderForm">
+
+   <label>نام و نام خانوادگی</label>
+   <input id="name" required placeholder="نام شما">
+
+   <label>شماره تماس</label>
+   <input id="phone" required type="tel" placeholder="شماره موبایل">
+
+   <label>نوع محصول</label>
+   <select id="type">
+    <option>شلف چوبی</option>
+    <option>شلف فلزی</option>
+    <option>شلف ترکیبی چوب و فلز</option>
+    <option>قفسه سفارشی</option>
+   </select>
+
+   <label>ابعاد موردنظر</label>
+   <input id="size" placeholder="مثلاً طول ۱۲۰ و ارتفاع ۸۰">
+
+   <label>توضیحات سفارش</label>
+   <textarea id="details" rows="4"
+   placeholder="رنگ، تعداد طبقات و توضیحات..."></textarea>
+
+   <button class="btn btn-gold" type="submit">
+    ارسال درخواست سفارش در واتساپ
+   </button>
+
+  </form>
+ </div>
+</div>
+</section>
+
+<section class="section container" id="about">
+<div class="about-box">
+
+ <h2>درباره استارتاپ آسان نصب</h2>
+
+ <p>
+  آسان نصب با هدف طراحی و تولید شلف‌های چوبی و فلزی
+  و ارائه راهکارهای کاربردی برای استفاده بهتر از فضا
+  راه‌اندازی شده است. ما تلاش می‌کنیم زیبایی، کیفیت
+  و خلاقیت را در محصولات خود ترکیب کنیم.
+ </p>
+
+ <br>
+
+ <strong>بنیان‌گذار: محمد عباسی</strong>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+
+ <h2>با آسان نصب در ارتباط باشید</h2>
+
+ <p>برای مشاوره و سفارش محصولات با ما تماس بگیرید.</p>
+
+ <br>
+
+ <p>واتساپ: 09196982981</p>
+
+ <br>
+
+ <a href="https://wa.me/989196982981"
+ class="btn btn-gold" target="_blank" rel="noopener">
+  ارتباط در واتساپ
+ </a>
+
+</div>
+</section>
+
+<footer>
+ © تمامی حقوق این سایت متعلق به آسان نصب است.
+ <br>
+ طراحی و توسعه فروشگاه اینترنتی آسان نصب
+</footer>
+
+<div class="cart-panel" id="cartPanel">
+
+ <button class="close-cart" onclick="closeCart()">×</button>
+
+ <h2>سبد خرید</h2>
+
+ <div id="cartItems"></div>
+
+ <div class="cart-total" id="total"></div>
+
+ <button class="btn btn-gold"
+ style="width:100%" onclick="checkout()">
+  ثبت سفارش در واتساپ
+ </button>
+
+</div>
+
+<script>
+
+// شماره واتساپ آسان نصب
+// فرمت بین‌المللی بدون صفر ابتدایی
+const WHATSAPP = "989196982981";
+
+const products = [
+
+ {
+  id:1,
+  name:"شلف دیواری چوبی",
+  description:"ساخته شده از چوب با طراحی مدرن",
+  price:1250000,
+  icon:"🪵"
+ },
+
+ {
+  id:2,
+  name:"شلف فلزی صنعتی",
+  description:"مقاوم و مناسب فضای مدرن",
+  price:1850000,
+  icon:"🏗️"
+ },
+
+ {
+  id:3,
+  name:"شلف ترکیبی چوب و فلز",
+  description:"ترکیب زیبایی چوب و استحکام فلز",
+  price:2250000,
+  icon:"🪑"
+ },
+
+ {
+  id:4,
+  name:"قفسه چندطبقه",
+  description:"مناسب منزل و فروشگاه",
+  price:2850000,
+  icon:"📚"
+ },
+
+ {
+  id:5,
+  name:"شلف دکوراتیو",
+  description:"طراحی خاص برای دکوراسیون",
+  price:1500000,
+  icon:"🏠"
+ },
+
+ {
+  id:6,
+  name:"قفسه سفارشی",
+  description:"ساخت با ابعاد و طرح دلخواه",
+  price:3000000,
+  icon:"🔨"
+ }
+
+];
+
+let cart = [];
+
+const formatPrice = n =>
+ n.toLocaleString("fa-IR") + " تومان";
+
+function renderProducts(){
+
+ document.getElementById("productList").innerHTML =
+ products.map(p => `
+
+  <div class="product">
+
+   <div class="product-image">
+    ${p.icon}
+   </div>
+
+   <div class="product-info">
+
+    <h3>${p.name}</h3>
+
+    <p>${p.description}</p>
+
+    <div class="price">
+     ${formatPrice(p.price)}
+    </div>
+
+    <button class="add" onclick="addToCart(${p.id})">
+     افزودن به سبد خرید
+    </button>
+
+   </div>
+
+  </div>
+
+ `).join("");
+
+}
+
+function addToCart(id){
+
+ const product = products.find(p => p.id === id);
+ const old = cart.find(p => p.id === id);
+
+ if(old){
+  old.qty++;
+ }else{
+  cart.push({...product,qty:1});
+ }
+
+ renderCart();
+ openCart();
+
+}
+
+function renderCart(){
+
+ const count = cart.reduce((s,p) => s+p.qty,0);
+
+ document.getElementById("count").textContent =
+ count.toLocaleString("fa-IR");
+
+ document.getElementById("cartItems").innerHTML =
+ cart.length ?
+
+ cart.map(p => `
+
+  <div class="cart-item">
+
+   <strong>${p.name}</strong>
+
+   <br>
+
+   ${formatPrice(p.price)}
+
+   <div class="quantity">
+
+    تعداد:
+
+    <button onclick="changeQty(${p.id},-1)">−</button>
+
+    ${p.qty}
+
+    <button onclick="changeQty(${p.id},1)">+</button>
+
+    <button onclick="removeItem(${p.id})">حذف</button>
+
+   </div>
+
+   <strong>
+    ${formatPrice(p.price*p.qty)}
+   </strong>
+
+  </div>
+
+ `).join("")
+
+ : "سبد خرید خالی است.";
+
+ const total = cart.reduce(
+  (s,p) => s+p.price*p.qty,0
+ );
+
+ document.getElementById("total").textContent =
+ "مجموع: " + formatPrice(total);
+
+}
+
+function changeQty(id,amount){
+
+ const item = cart.find(p => p.id === id);
+
+ if(!item)return;
+
+ item.qty += amount;
+
+ if(item.qty <= 0){
+  removeItem(id);
+ }else{
+  renderCart();
+ }
+
+}
+
+function removeItem(id){
+
+ cart = cart.filter(p => p.id !== id);
+
+ renderCart();
+
+}
+
+function openCart(){
+
+ document.getElementById("cartPanel")
+ .classList.add("open");
+
+}
+
+function closeCart(){
+
+ document.getElementById("cartPanel")
+ .classList.remove("open");
+
+}
+
+function sendWhatsApp(message){
+
+ const url =
+ "https://wa.me/" + WHATSAPP +
+ "?text=" + encodeURIComponent(message);
+
+ window.open(url,"_blank");
+
+}
+
+function checkout(){
+
+ if(cart.length === 0){
+
+  alert("سبد خرید خالی است.");
+
+  return;
+
+ }
+
+ let message =
+ "سلام، برای سفارش از فروشگاه آسان نصب پیام می‌دهم:\n";
+
+ cart.forEach(p => {
+
+  message +=
+  `\n${p.name} - تعداد ${p.qty} - ${formatPrice(p.price*p.qty)}`;
+
+ });
+
+ const total = cart.reduce(
+  (s,p) => s+p.price*p.qty,0
+ );
+
+ message +=
+ "\n\nمجموع سفارش: " + formatPrice(total);
+
+ message +=
+ "\n\nلطفاً برای نهایی کردن سفارش راهنمایی کنید.";
+
+ sendWhatsApp(message);
+
+}
+
+document.getElementById("orderForm")
+.addEventListener("submit",function(e){
+
+ e.preventDefault();
+
+ const name =
+ document.getElementById("name").value.trim();
+
+ const phone =
+ document.getElementById("phone").value.trim();
+
+ const type =
+ document.getElementById("type").value;
+
+ const size =
+ document.getElementById("size").value.trim();
+
+ const details =
+ document.getElementById("details").value.trim();
+
+ const message = `سلام، درخواست سفارش از آسان نصب دارم.
+
+نام: ${name}
+
+تلفن: ${phone}
+
+نوع محصول: ${type}
+
+ابعاد: ${size}
+
+توضیحات: ${details}`;
+
+ sendWhatsApp(message);
+
+});
+
+renderProducts();
+renderCart();
+
+</script>
+
+</body>
+</html>
